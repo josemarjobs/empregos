@@ -1,0 +1,743 @@
+* {  
+  margin:0;  
+  padding:0;  
+}    
+body{
+	background:url(images/back.jpg);
+	font-size:75%;
+	color:#000;
+	/*color:#604134;*/
+	font-family: Verdana, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+p.paginacao{
+	margin-bottom:10px;
+	margin-left:140px;
+}
+p.paginacao a{
+	border:1px solid #0099FF;;
+	padding:1px 2px;
+	font-size:13px;
+	margin:4px;
+}
+p.paginacao a:hover{
+	background:#FF8D14;
+	color:white;
+	text-decoration:none;
+}
+.even{
+	
+}
+.odd{
+	background:url(images/odd.jpg);
+}
+a{
+	text-decoration:none;
+	color:#0099FF;
+}
+a:hover{
+	text-decoration:underline;
+}
+
+h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#000;}
+
+.round {  
+/**** Propriedades que fazem os catnos arredondados **/  
+  -webkit-border-radius: 5px;  
+  -moz-border-radius: 5px;  
+   border-radius: 5px;  
+}  
+.sombra{
+	text-shadow:1px 1px 1px #FFF; /* propriedade que coloca a sombra no texto */  	
+}
+#cabecalho{
+	background:#91BAD9;
+}
+#cabecalho #centro_cabecalho{
+	width:1000px;
+	margin:0 auto;
+	background:#91BAD9;
+	overflow:hidden;
+}
+
+#cabecalho #centro_cabecalho #logo{
+	height:80px;
+	width: 150px;
+	float:left;
+}
+#cabecalho #centro_cabecalho #logo a img{
+	border:none;
+}
+
+/*88888888888888888888888888888888888888888888888888888888888*/
+.searchBox {
+	border:1px solid black;
+	width:550px;
+	background:#9CC068;
+}
+.term  {
+	font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+	float: left;
+	font-size: 15px;
+	height: 21px;
+	padding: 5px;
+	width: 450px;
+	border:none;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.search  {
+	font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+	background:#9CC068;
+	border: medium none;
+	color: #333;
+	cursor: pointer;
+	float: left;
+	font-size: 15px;
+	height: 31px;
+	margin-left: -4px;
+	padding: 5px 10px;
+	*padding: 0;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+/*8888888888888888888888888888888888888888888888888888888888*/
+
+#cabecalho #centro_cabecalho #nav_bar{
+	margin-top:10px;
+	background:white;
+	float:right;
+	margin-left:20px;
+}
+#cabecalho #centro_cabecalho #nav_bar ul{
+	padding:0;
+}
+#cabecalho #centro_cabecalho #nav_bar ul li{
+	list-style-type:none;
+	text-align:center;
+	float:left;
+	padding:5px 3px;
+	
+}
+#cabecalho #centro_cabecalho #nav_bar ul li a{
+	text-decoration:none;
+	margin:5px;
+	font-size:140%;
+	color:#0099FF;
+}
+#cabecalho #centro_cabecalho #nav_bar ul li.borda a{
+	border-left:1px solid #0099FF;
+}
+
+#cabecalho #centro_cabecalho #nav_bar ul li a:hover{
+	color:#003C64;
+	/*text-shadow:0 1px 1px #000;*/
+	text-decoration:underline;
+}
+
+#cabecalho #barra_horizontal{
+	height:50px;
+	/*margin-top:10px;
+	background:url(images/horizontal.jpg) repeat-x;*/
+	background:#9CC068;
+	
+}
+
+#cabecalho #barra_horizontal #centro_barra{
+	width:1000px;
+	margin:0 auto;
+	background:#9CC068;
+}
+#cabecalho #barra_horizontal #centro_barra #busca{
+	float:left;
+	padding-top:10px;
+}
+#cabecalho #barra_horizontal #centro_barra #anunciar{
+	float:left;
+	margin-left:20px;
+	margin-top:10px;
+	font-size:15px;
+}
+#cabecalho #barra_horizontal #centro_barra #anunciar a{
+	font-size:20px;
+	text-shadow:1px 1px 1px #000; /* propriedade que coloca a sombra no texto */  	
+}
+div.clear{
+	clear:both;
+}
+/**************************************************************/
+#corpo{
+	
+}
+
+#corpo #centro{
+	margin:0 auto;
+	width:1000px;
+	background:#FFF;
+	padding:0 10px;
+	overflow:hidden;
+}
+
+#corpo #centro #conteudo{
+	float:left;
+	width:690px;
+	min-height:500px;
+	margin-top:10px;
+	
+}
+
+#corpo #centro #conteudo .vagas_recentes{
+	font-size:20px;
+	font-family:Tahoma, Arial;
+	color:#000;
+	border-bottom:1px solid black;
+	margin-bottom:10px;
+	padding-left:30px;
+}
+#corpo #centro #conteudo .vaga{
+	font-size:15px;
+	margin-bottom:25px;
+	overflow:hidden;
+}
+#corpo #centro #conteudo .vaga .info{
+	margin-top:40px;
+	float:left;
+	width:130px;
+	color:gray;
+	text-align:right;
+}
+
+#corpo #centro #conteudo .vaga .detalhes{
+	float:left;
+	margin-left:10px;
+	width:530px;
+}
+#corpo #centro #conteudo .vaga .detalhes p{
+	padding:1px 0;
+}
+#corpo #centro #conteudo .vaga .detalhes p.titulo_vaga_index{
+  	margin-bottom:10px;
+  	color: #E98C08;
+  	font-size: 20px;
+}
+#corpo #centro #conteudo .vaga .detalhes p a.titulo_vaga_index{
+    font-size: 20px;
+  	color: #E98C08;
+}
+#corpo #centro #conteudo .vaga .detalhes p.titulo_vaga{
+  	margin-bottom:10px;
+  	color: #E98C08;
+  	font-size: 20px;
+  	border-bottom:1px solid #E98C08;
+}
+#corpo #centro #conteudo .vaga .detalhes p span.right a.titulo_vaga{
+    font-size: 13px;
+  	margin:0px 10px;
+}
+span.right{
+	float:right;
+	font-size: 13px;
+	margin-top:8px;
+}
+#corpo #centro #conteudo .vaga .detalhes p a.empresa, p.empresa{
+  	font-size: 15px;
+}
+
+#corpo #centro #lateral{
+	float:right;
+	margin-top:10px;
+	width:300px;
+}
+#corpo #centro #lateral #estatisticas{
+	margin-bottom:20px;
+}
+#corpo #centro #lateral #estatisticas ul{
+	padding-left:20px;
+	list-style-type:circle;
+	font-size:14px;
+}
+#corpo #centro #lateral #estatisticas ul li{
+	margin:4px 0;
+}
+#corpo #centro #lateral #estatisticas ul li a{
+	color:gray;
+}
+#corpo #centro #lateral #estatisticas h1{
+	font-size:20px;
+	font-family:Tahoma, Arial;
+	color:#000;
+	border-bottom:1px solid black;
+}
+/*************************
+FORMULARIO DE CADASTRO RAPIDO
+****************************/
+#corpo #centro #lateral #cadastre-se{
+	background:#FF8D14;
+	padding:4px;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+#corpo #centro #lateral #cadastre-se h1{
+	font-size:18px;
+	color:#FFF;
+	float:right;
+	margin-right:10px;
+}
+#corpo #centro #lateral #cadastre-se label{
+	float: left;
+ 	width: 60px;
+ 	text-align: right;
+ 	margin: 4px 10px 1px 10px;
+ 	font-size:130%;
+ 	color:#FFF;
+}
+#corpo #centro #lateral #cadastre-se input, select{
+	margin: 4px 0px 1px 0px;
+	width:200px;
+	border:1px solid #604134;
+	font-family:Tahoma, Arial, Georgia;
+	font-size:130%;
+}
+#corpo #centro #lateral #cadastre-se select{
+	width:205px;
+}
+#corpo #centro #lateral #cadastre-se input.dados, select.dados{
+	font-size:120%;
+	padding: 2px;
+}
+#corpo #centro #lateral #cadastre-se input.botao{
+	margin-left:185px;
+	margin-bottom:4px;
+	color:#FFF;
+	background:#9CC068;
+	width:100px;
+}
+#corpo #centro #lateral #cadastre-se #info{
+	margin:2px;
+	padding-top:2px;
+	border-top:1px solid white;
+	color:white;
+	font-size:12px;
+	text-align:center;
+}
+/***********************RODAPE**************************************/
+#footer{
+	width:1010px;
+	height:20px;
+	margin:5px auto;
+	background:white;
+	padding:4px;
+}
+#footer #menu{
+	float:left;
+}
+#footer #menu ul{
+	display:inline;
+	list-style-type:none;
+	margin:0 auto;
+	
+}
+#footer #menu ul li{
+	height:25px;
+	text-align:center;
+	float:left;
+	padding:2px 3px 0 3px;
+}
+#footer #menu ul li a{
+	text-decoration:none;
+	padding:0 5px 0 5px;
+	font-size:14px;
+	color:#604134;
+	font-weight:bold;
+}
+#footer #menu li a:hover{
+	color:#604134;
+	text-shadow:0 1px 1px #000;
+}
+
+#footer #copyright{
+	margin-top:3px;
+	margin-right:10px;
+	float:right;
+}
+#footer #copyright a{
+	color:#604134;
+}
+#footer #copyright a:hover{
+	color:#604134;
+	text-decoration:none;
+	text-shadow:0 1px 1px #000;
+}
+
+
+/**************************************************************
+VISUALIZAR VAGAS
+**************************************************************/
+#corpo #centro #conteudo #visualizar_vaga{
+	font-size:15px;
+	margin-bottom:25px;
+	padding-left:10px;
+	
+}
+#corpo #centro #conteudo #visualizar_vaga p{
+	padding:3px 0;
+}
+#corpo #centro #conteudo #visualizar_vaga p.titulo_vaga{
+  	margin-bottom:5px;
+ 	color: #E98C08;
+  	font-size: 20px;
+  	border-bottom:1px solid black;
+  	padding:3px 0 0 0;
+}
+#corpo #centro #conteudo #visualizar_vaga p span.data{
+  	float:right;
+}
+#corpo #centro #conteudo #visualizar_vaga p a.empresa, p.empresa{
+  	font-size: 13px;
+}
+#corpo #centro #conteudo #visualizar_vaga p.candidatar{
+	margin-top:20px;
+}
+#corpo #centro #conteudo #visualizar_vaga p a.candidatar_se{
+	color:#FFF;
+	background:#9CC068;
+	padding:5px;
+	border:1px solid #604134;
+}
+/************LATERAL**********/
+#corpo #centro #lateral #mais_vagas{
+	background:#FF8D14;
+	padding:4px;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+#corpo #centro #lateral #mais_vagas h1{
+	font-size:18px;
+	color:#FFF;
+	float:right;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+#corpo #centro #lateral #mais_vagas ul li{
+	list-style-type:circle;
+	margin-left:30px;
+	margin-bottom:5px;
+	font-size:16px;
+}
+#corpo #centro #lateral #mais_vagas ul li a{
+	color:black;
+	text-decoration:underline;
+}
+/*******************RELACIONADAS************************************/
+#corpo #centro #lateral #relacionadas{
+	margin-bottom:20px;
+}
+#corpo #centro #lateral #relacionadas ul{
+	padding-left:20px;
+	list-style-type:circle;
+	font-size:14px;
+}
+#corpo #centro #lateral #relacionadas ul li{
+	margin:4px 0;
+}
+#corpo #centro #lateral #relacionadas ul li a{
+	color:gray;
+}
+#corpo #centro #lateral #relacionadas h1{
+	font-size:20px;
+	font-family:Tahoma, Arial;
+	color:#000;
+	border-bottom:1px solid black;
+}
+/*****************FIM VAGAS***************************************
+****************ANUNCIAR VAGAS***********************************/
+#corpo #centro #login_cadastro{
+	font-family:Tahoma, Arial, Georgia;
+	font-size:15px;
+	overflow:hidden;
+	border:1px solid black;
+	margin:10px 30px;
+	background:#91BAD9;
+	
+}
+#corpo #centro #login_cadastro p.titulo{
+	color:#FFF;
+	font-size:17px;
+	border-bottom:1px solid black;
+	margin:1px 30px;
+	text-align:right;
+}
+#corpo #centro #login_cadastro #login{
+	width:450px;
+	float:left;
+	height:220px;
+	background:#FF8D14;
+}
+#corpo #centro #login_cadastro #login p.login_form{
+	margin:20px 0px;
+}
+#corpo #centro #login_cadastro label{
+	font-size:15px;
+	float: left;
+ 	width: 100px;
+ 	text-align: right;
+ 	margin: 1px 10px 1px 10px;
+}
+#corpo #centro #login_cadastro input, #corpo #centro #login_cadastro textarea{
+	margin: 1px 4px 1px 0px;
+	width:300px;
+	border:1px solid #604134;
+	font-family:Tahoma, Arial, Georgia;
+	font-size:15px;
+	padding:2px;
+}
+#corpo #centro #login_cadastro input.botao{
+	margin-left:120px;
+	margin-bottom:4px;
+	color:#FFF;
+	background:#9CC068;
+	width:100px;
+}
+#corpo #centro #login_cadastro #cadastro{
+	float:left;
+	width:470px;
+	height:220px;
+	background:#91BAD9;
+}
+
+/****++=========================================================*/
+#corpo #centro #formulario{
+	padding:5px 5px 5px 50px;
+	font-family:Tahoma, Arial, Georgia;
+	font-size:15px;
+}
+#corpo #centro #formulario p{
+	margin-bottom:5px;
+}
+#corpo #centro #formulario label{
+	font-size:15px;
+	float: left;
+ 	width: 150px;
+ 	text-align: right;
+ 	margin: 5px 10px 1px 10px;
+}
+#corpo #centro #formulario input, #corpo #centro #formulario select{
+	margin: 4px 4px 4px 0px;
+	width:300px;
+	border:1px solid #604134;
+	font-family:Tahoma, Arial, Georgia;
+	font-size:15px;
+	padding:2px;	
+}
+#corpo #centro #formulario input.empresa{
+	width:180px;
+}
+#corpo #centro #formulario input.responsavel{
+	width:210px;
+	margin-left:5px;
+}
+#corpo #centro #formulario select.como_candidatar{
+	width:170px;
+}
+#corpo #centro #formulario .error{
+	color:red;
+	font-style:italic;
+	font-size:13px;
+}
+#corpo #centro #formulario .info{
+	color:gray;
+	font-style:italic;
+	font-size:13px;
+}
+#corpo #centro #formulario textarea{
+	margin: 4px 0px 4px 0px;
+	border:1px solid #604134;
+	font-family:Tahoma, Arial, Georgia;
+	font-size:15px;
+	padding:2px;
+}
+#corpo #centro #formulario input.salario{
+	width:80px;
+}
+#corpo #centro #formulario input.botao{
+	margin-left:170px;
+	margin-bottom:4px;
+	color:#FFF;
+	background:#9CC068;
+	width:100px;
+}
+/****************FIM ANUNCIAR VAGAS***********************************
+******************ADICIONAR CURRICULOS******************************/
+#corpo #centro .informacoes_curriculares{
+	color:gray;
+	font-style:italic;
+	font-size:17px;
+	border-bottom:1px solid black;
+	padding:10px 0 2px 200px;
+	margin-bottom:20px;
+}
+#corpo #centro .clique{
+	background-color:yellow;
+}
+/******************INFORMAÇÕES******************************/
+#corpo #centro #como_funciona{
+	padding:10px 30px;
+	font-size:14px;
+}
+#corpo #centro #como_funciona h1{
+	border-bottom:1px solid black;
+	text-align:right;
+	margin-bottom:20px;
+	color: #E98C08;
+  	font-size: 23px;
+}
+#corpo #centro #como_funciona h2{
+	margin-bottom:5px;
+	color: #E98C08;
+  	font-size: 20px;
+}
+#corpo #centro #como_funciona h3{
+	margin-bottom:5px;
+	color: #E98C08;
+}
+#corpo #centro #como_funciona p{
+	margin-bottom:10px;
+}
+#corpo #centro #como_funciona ol li p.titulo{
+	font-weight:bold;
+}
+.pedacos_curriculo{
+	border-left:10px solid gray;	
+	margin-top:10px;
+	margin-bottom:10px;
+	font-size:14px;
+	color:gray;
+	padding-left:10px;
+}
+.pedacos_curriculo p.titulo_curriculo{
+	border-bottom:1px solid gray;
+}
+.pedacos_curriculo ul li{
+	margin-left:10px;
+}
+/*************LOGGED IN*************************************************/
+a.opcoes_de_vagas{
+	font-size:17px;
+	background:#FF8D14;
+	color:#FFF;
+}
+
+#corpo #centro #lateral #dados_cadastrais{
+	background:#FF8D14;
+	padding:4px;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+#corpo #centro #lateral #dados_cadastrais h1{
+	font-size:18px;
+	color:#FFF;
+	float:right;
+	margin-right:10px;
+}
+#corpo #centro #lateral #dados_cadastrais b{
+
+ 	width: 40px;
+ 	text-align: right;
+ 	margin: 4px 10px 1px 10px;
+ 	font-size:130%;
+ 	color:#FFF;
+}
+
+#corpo #centro #lateral #dados_cadastrais #info{
+	margin:2px;
+	padding-top:2px;
+	border-top:1px solid white;
+	color:white;
+	font-size:12px;
+	text-align:center;
+}
+#corpo #centro #lateral #dados_cadastrais p{
+	margin:4px;
+}
+#corpo #centro #lateral #dados_cadastrais p span.dado{
+	margin: 4px 0px 1px 0px;
+	width:190px;
+	font-family:Tahoma, Arial, Georgia;
+	font-size:130%;	
+}
+/*************************************************************************/
+#corpo #centro #vagas{
+	width:890px;
+	min-height:500px;
+	margin:0 auto;
+	
+}
+
+#corpo #centro #vagas .vagas_recentes{
+	font-size:20px;
+	font-family:Tahoma, Arial;
+	color:#000;
+	border-bottom:1px solid black;
+	margin-bottom:10px;
+	padding-left:30px;
+}
+#corpo #centro #vagas .vaga{
+	font-size:15px;
+	margin-bottom:25px;
+	overflow:hidden;
+}
+#corpo #centro #vagas .vaga .info{
+	margin-top:40px;
+	float:left;
+	width:130px;
+	color:gray;
+	text-align:right;
+}
+
+#corpo #centro #vagas .vaga .detalhes{
+	float:left;
+	margin-left:10px;
+	width:730px;
+	padding-bottom:5px;
+}
+#corpo #centro #vagas .vaga .detalhes p{
+	padding:1px 0;
+}
+#corpo #centro #vagas .vaga .detalhes p.titulo_vaga_index{
+  	margin-bottom:10px;
+  	color: #E98C08;
+  	font-size: 20px;
+}
+#corpo #centro #vagas .vaga .detalhes p a.titulo_vaga_index{
+    font-size: 20px;
+  	color: #E98C08;
+}
+#corpo #centro #vagas .vaga .detalhes p.titulo_vaga{
+  	margin-bottom:10px;
+  	color: #E98C08;
+  	font-size: 20px;
+  	border-bottom:1px solid #E98C08;
+}
+#corpo #centro #vagas .vaga .detalhes p span.right a.titulo_vaga{
+    font-size: 13px;
+  	margin:0px 10px;
+}
+span.right{
+	float:right;
+	font-size: 13px;
+	margin-top:8px;
+}
+#corpo #centro #vagas .vaga .detalhes p a.empresa, p.empresa{
+  	font-size: 15px;
+}
+
+
+
