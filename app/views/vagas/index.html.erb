@@ -1,0 +1,43 @@
+<h1>Listing vagas</h1>
+
+<table>
+  <tr>
+    <th>Vaga</th>
+    <th>Como se candidatar</th>
+    <th>Contato</th>
+    <th>Salario min</th>
+    <th>Salario max</th>
+    <th>Empresa</th>
+    <th>Cidade</th>
+    <th>Perfil</th>
+    <th>Pre requisitos</th>
+    <th>Tags</th>
+    <th>Descricao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vagas.each do |vaga| %>
+  <tr>
+    <td><%= vaga.vaga %></td>
+    <td><%= vaga.como_se_candidatar %></td>
+    <td><%= vaga.contato %></td>
+    <td><%= vaga.salario_min %></td>
+    <td><%= vaga.salario_max %></td>
+    <td><%= vaga.empresa_id %></td>
+    <td><%= vaga.cidade %></td>
+    <td><%= vaga.perfil_id %></td>
+    <td><%= vaga.pre_requisitos %></td>
+    <td><%= vaga.tags %></td>
+    <td><%= vaga.descricao %></td>
+    <td><%= link_to 'Show', vaga %></td>
+    <td><%= link_to 'Edit', edit_vaga_path(vaga) %></td>
+    <td><%= link_to 'Destroy', vaga, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vaga', new_vaga_path %>

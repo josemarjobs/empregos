@@ -547,6 +547,9 @@ VISUALIZAR VAGAS
 #corpo #centro #formulario select.como_candidatar{
 	width:170px;
 }
+#corpo #centro #formulario select#vaga_como_se_candidatar{
+	width:170px;
+}
 #corpo #centro #formulario .error{
 	color:red;
 	font-style:italic;

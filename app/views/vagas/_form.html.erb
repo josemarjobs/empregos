@@ -1,0 +1,33 @@
+<%= simple_form_for(@vaga) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :vaga %>
+	<p>
+		 <%= f.label :como_se_candidatar %>
+		 <%= f.select :como_se_candidatar, ['Enviar CV para:', 'Ligar para:'], 
+		 :select_html => { :class => 'como_candidatar' } %>
+
+		 <%= f.text_field :contato %>
+	</p>
+	<p>
+		 <%= f.label 'Faixa Salarial' %>
+		 <%= f.text_field :salario_min, :class=>'salario' %> - <%= f.text_field :salario_max, :class=>'salario' %>
+	</p>
+
+    <%= f.input :empresa_id %>
+    <%= f.input :cidade %>
+    <%= f.input :perfil_id %>
+
+    <%= f.input :pre_requisitos %>
+    <%= f.input :tags %>
+	<p>
+		 <%= f.label :descricao %>
+		 <%= f.text_area :descricao, :rows=>10, :cols=>70 %>
+	</p>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit, :class=>"botao" %>
+  </div>
+<% end %>

@@ -1,4 +1,6 @@
 Empregos::Application.routes.draw do
+  resources :vagas
+
 	match '/home' => 'pages#home', :as=>'home'
 	
 

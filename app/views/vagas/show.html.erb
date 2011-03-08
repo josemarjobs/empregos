@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Vaga:</b>
+  <%= @vaga.vaga %>
+</p>
+
+<p>
+  <b>Como se candidatar:</b>
+  <%= @vaga.como_se_candidatar %>
+</p>
+
+<p>
+  <b>Contato:</b>
+  <%= @vaga.contato %>
+</p>
+
+<p>
+  <b>Salario min:</b>
+  <%= @vaga.salario_min %>
+</p>
+
+<p>
+  <b>Salario max:</b>
+  <%= @vaga.salario_max %>
+</p>
+
+<p>
+  <b>Empresa:</b>
+  <%= @vaga.empresa_id %>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%= @vaga.cidade %>
+</p>
+
+<p>
+  <b>Perfil:</b>
+  <%= @vaga.perfil_id %>
+</p>
+
+<p>
+  <b>Pre requisitos:</b>
+  <%= @vaga.pre_requisitos %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @vaga.tags %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @vaga.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_vaga_path(@vaga) %> |
+<%= link_to 'Back', vagas_path %>

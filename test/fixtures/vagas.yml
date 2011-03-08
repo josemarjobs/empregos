@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  vaga: MyString
+  como_se_candidatar: MyString
+  contato: MyString
+  salario_min: 1.5
+  salario_max: 1.5
+  empresa_id: 1
+  cidade: MyString
+  perfil_id: 1
+  pre_requisitos: MyString
+  tags: MyString
+  descricao: MyText
+
+two:
+  vaga: MyString
+  como_se_candidatar: MyString
+  contato: MyString
+  salario_min: 1.5
+  salario_max: 1.5
+  empresa_id: 1
+  cidade: MyString
+  perfil_id: 1
+  pre_requisitos: MyString
+  tags: MyString
+  descricao: MyText

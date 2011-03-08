@@ -2,7 +2,7 @@
 	<div id="logo">
 		<h1>
 			<a href="index.html">
-				<img src="images/logo.png" alt="Logo"/>
+				<%= image_tag 'logo.png', :alt=>"Logo" %>
 			</a>
 		</h1>	
 	</div>
@@ -18,5 +18,5 @@
 	<div class="clear"></div>
 </div>
 <div id="barra_horizontal">
-	<%= render :partial=>"barrahorizontal" %>
+	<%= render :partial=>"pages/barrahorizontal" %>
 </div>
