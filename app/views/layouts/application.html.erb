@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-  <title>Empregos</title>
-  <%= render :partial=>"shared/includes" %>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>Empregos</title>
+	  <%= render :partial=>"shared/includes" %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div id="cabecalho">
+	  <%= render :partial=>"cabecalho" %>
+	</div>
+	<div id="corpo">
+		<div id="centro" class="round">
+			<%= yield %>
+		</div>
+	</div>
+	<%= render :partial=>"rodape" %>
 </body>
 </html>
