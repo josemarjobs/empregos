@@ -10,7 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110308173105) do
+ActiveRecord::Schema.define(:version => 20110308181707) do
+
+  create_table "perfils", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "vagas", :force => true do |t|
     t.string   "vaga"

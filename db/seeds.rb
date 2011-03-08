@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+[
+{:nome=>"Todos"},
+{:nome=>"Profissional"},
+{:nome=>"Estagiario"},
+{:nome=>"Deficiente Fisico"},
+].each do|p|
+	Perfil.find_or_create_by_nome(p)
+end
