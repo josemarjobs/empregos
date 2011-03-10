@@ -28,7 +28,7 @@ p.paginacao a:hover{
 	
 }
 .odd{
-	background:url(images/odd.jpg);
+	background:url(../images/odd.jpg);
 }
 a{
 	text-decoration:none;

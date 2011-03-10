@@ -2,7 +2,7 @@ Empregos::Application.routes.draw do
   resources :vagas
 
 	match '/home' => 'pages#home', :as=>'home'
-	
+	get '/anunciar' =>'vagas#new', :as => 'anunciar'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

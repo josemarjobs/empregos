@@ -19,7 +19,7 @@
     <%= f.input :cidade %>
 	<p>
 		 <%= f.label :perfil %>
-		 <%= f.select :perfil, options_from_collection_for_select(Perfil.all, "id", "nome")%>
+		 <%= f.select :perfil_id, options_from_collection_for_select(Perfil.all, "id", "nome")%>
 	</p>
     <%= f.input :pre_requisitos %>
     <%= f.input :tags %>

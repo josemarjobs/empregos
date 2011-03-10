@@ -1,0 +1,20 @@
+<div class="<%= cycle("even","odd")%> vaga">
+	<div class="info">
+		<p><%= vaga.updated_at.to_date.to_formatted_s(:long) %></p>
+		<p>Cid.: <%= vaga.cidade %></p>
+		<p>
+			<% if vaga.perfil.nome == "Todos" %>
+			<b>Vaga para <%= vaga.perfil.nome %></b>
+			<% else %>
+			<b><%= vaga.perfil.nome %></b>
+			<% end %>
+		</p>
+	</div>	
+	<div class="detalhes">
+		<p class="titulo_vaga_index">
+			<%= link_to vaga.vaga, vaga, :class=>"titulo_vaga_index" %>
+		</p>
+		<p class="empresa">Emp.: <a href="" class="empresa">SoftSystem Corp</a></p>
+		<p><%= vaga.vaga_curta %></p>
+	</div>
+</div>

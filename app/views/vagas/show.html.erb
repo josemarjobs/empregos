@@ -1,60 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div id="conteudo"> 
+	<!-- VAGA -->
+	<div id="visualizar_vaga" class="even">
+		<p class="titulo_vaga">
+			<%= @vaga.vaga %>
+		<span class="data">15 Fev 2011</span>
+		</p>
+		<p>
+			<b>Empresa:</b> <a href="">SoftSystem Corp</a>
+		</p>
+		<p>
+			<b>Faixa Salarial:</b> <%= @vaga.salario_min %> - <%= @vaga.salario_max %>
+		</p>
+		<p>
+			<b>Cidade:</b> <%= @vaga.cidade %>
+		</p>
+		<p>
+			<b>Vaga para:</b> <%= @vaga.perfil.nome %>
+		</p>
+		<p>
+			<b>Descrição:</b> <%= @vaga.descricao %>
+		</p>
+		<p><b>Pre-requisitos:</b> <%= @vaga.pre_requisitos %></p>
+		<p><b>Palavras chave:</b><%= @vaga.tags %>|<a href="">java</a>, <a href="">ruby</a>, <a href="">ror</a>, <a href="">poo</a>, <a href="">c</a></p>
 
-<p>
-  <b>Vaga:</b>
-  <%= @vaga.vaga %>
-</p>
+   <p class="candidatar">
+		<%= link_to 'Candidatar-se', '', :class=>"candidatar_se" %> 
+		<%= link_to 'Voltar', vagas_path, :class=>"voltar" %>
+	</p>
 
-<p>
-  <b>Como se candidatar:</b>
-  <%= @vaga.como_se_candidatar %>
-</p>
-
-<p>
-  <b>Contato:</b>
-  <%= @vaga.contato %>
-</p>
-
-<p>
-  <b>Salario min:</b>
-  <%= @vaga.salario_min %>
-</p>
-
-<p>
-  <b>Salario max:</b>
-  <%= @vaga.salario_max %>
-</p>
-
-<p>
-  <b>Empresa:</b>
-  <%= @vaga.empresa_id %>
-</p>
-
-<p>
-  <b>Cidade:</b>
-  <%= @vaga.cidade %>
-</p>
-
-<p>
-  <b>Perfil:</b>
-  <%= @vaga.perfil_id %>
-</p>
-
-<p>
-  <b>Pre requisitos:</b>
-  <%= @vaga.pre_requisitos %>
-</p>
-
-<p>
-  <b>Tags:</b>
-  <%= @vaga.tags %>
-</p>
-
-<p>
-  <b>Descricao:</b>
-  <%= @vaga.descricao %>
-</p>
-
-
-<%= link_to 'Edit', edit_vaga_path(@vaga) %> |
-<%= link_to 'Back', vagas_path %>
+</div>
+</div>
+<div id="lateral">
+	<%= render :partial=>"vagas/lateral" %>
+</div>
