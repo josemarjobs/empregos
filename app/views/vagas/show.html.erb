@@ -3,7 +3,7 @@
 	<div id="visualizar_vaga" class="even">
 		<p class="titulo_vaga">
 			<%= @vaga.vaga %>
-		<span class="data">15 Fev 2011</span>
+		<span class="data"><%= @vaga.created_at.to_date.to_formatted_s(:long) %></span>
 		</p>
 		<p>
 			<b>Empresa:</b> <a href="">SoftSystem Corp</a>
