@@ -14,8 +14,16 @@
 		 <%= f.label 'Faixa Salarial' %>
 		 <%= f.text_field :salario_min, :class=>'salario' %> - <%= f.text_field :salario_max, :class=>'salario' %>
 	</p>
+	
+	<% if current_user && current_user.nome_empresa %>
+		<%= hidden_field_tag :empresa, current_user.nome_empresa %>
+	<% else %>
+	<p>
+		 <%= label_tag 'Empresa' %>
+		 <%= text_field_tag :empresa %>
+	</p>
+	<% end %>
 
-    <%= f.input :empresa_id %>
     <%= f.input :cidade %>
 	<p>
 		 <%= f.label :perfil %>
@@ -30,6 +38,8 @@
   </div>
 
   <div class="actions">
-    <%= f.button :submit, :class=>"botao" %>
+	<% if current_user %>
+    <%= f.button :submit, 'Anunciar',:class=>"botao" %>
+	<% end %>
   </div>
 <% end %>

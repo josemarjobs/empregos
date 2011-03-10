@@ -1,6 +1,7 @@
 class Vaga < ActiveRecord::Base
 
 	belongs_to :perfil
+	belongs_to :empresa
 
 	def vaga_curta
 		v=[]

@@ -25,7 +25,7 @@ class VagasController < ApplicationController
   # GET /vagas/new.xml
   def new
     @vaga = Vaga.new
-
+	 @empresa = Empresa.new
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @vaga }
@@ -41,7 +41,10 @@ class VagasController < ApplicationController
   # POST /vagas.xml
   def create
     @vaga = Vaga.new(params[:vaga])
-
+	 empresa = Empresa.find(session[:user_id])
+	 empresa.nome_empresa = params[:empresa] if params[:empresa]
+	 empresa.save
+	 @vaga.empresa = empresa
     respond_to do |format|
       if @vaga.save
         format.html { redirect_to(@vaga, :notice => 'Vaga was successfully created.') }

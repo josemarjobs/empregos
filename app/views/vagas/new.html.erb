@@ -1,26 +1,30 @@
-<div id="login_cadastro" class="round">
+<% if current_user %>
+	<% if notice %>
+		<p class="anunciar"><span class="error"><%= notice %></span> | Preencha os dados e publique a vaga</p>
+	<% else %>
+		<p class="anunciar">Preencha os dados e publique a vaga</p>
+	<% end %>
+<% else %>
+	<% if notice %>
+		<p class="anunciar"><span class="error"><%= notice %></span></p>
+	<% end %>
+	<div id="login_cadastro" class="round">
 	
-	<div id="login">
-		<p class="titulo">faça o login, se já possui cadastro</p>
-		<form action="" method="post" accept-charset="utf-8">
-			<p class="login_form"><label >E-mail</label><input type="text" name="" value="" /></p>
-			<p class="login_form"><label >Password</label><input type="text" name="" value="" /></p>
-			<p><input type="submit" value="Login" class="botao" /></p>
-		</form>
-	</div>
+		<div id="login">
+			<p class="titulo">faça o login, se já possui cadastro</p>
+			<%= render :partial=>'sessions/login'%>		
+		</div>
 	
-	<div id="cadastro">
-		<p class="titulo">Caso não possua cadastro, preencha o formulario abaixo, é rapido e simples</p>
-		<form action="" method="post" accept-charset="utf-8">
-			<p><label >E-mail</label><input type="text" name="" value="" /></p>
-			<p><label >Password</label><input type="text" name="" value="" /></p>
-			<p><label >Informações</label>Sobre a Empresa(opcional)<br /><textarea name="" rows="2" cols="40"></textarea></p>
-			<p><input type="submit" value="Cadastrar" class="botao" /></p>
-		</form>
+		<div id="cadastro">
+			<p class="titulo">Caso não possua cadastro, preencha o formulario abaixo, é rapido e simples</p>
+			<%= render :partial=>'empresas/form'%>
+		</div>
 	</div>
-</div>
+<% end %>
+
 <div id="formulario">
 	<%= render 'form' %>
 </div>
 
 <%= link_to 'Back', vagas_path %>
+

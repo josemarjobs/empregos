@@ -1,8 +1,17 @@
 Empregos::Application.routes.draw do
+  get "session/new"
+
+  resources :empresas
+
   resources :vagas
+  resources :sessions
 
 	match '/home' => 'pages#home', :as=>'home'
 	get '/anunciar' =>'vagas#new', :as => 'anunciar'
+
+	match "/log_out" => "sessions#destroy", :as => "log_out"
+	match "/log_in" => "sessions#new", :as => "log_in"
+	match "/log_in_anunciar" => "sessions#create_anunciar", :as => "log_in_anunciar"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,15 @@
+<%= simple_form_for(@empresa) do |f| %>
+  <div class="inputs">
+    <%= f.input :nome %>
+    <%= f.input :email %>
+	 <%= f.input :password %>	
+	<p>
+		 <%= f.label 'Empresa' %>
+		 <%= f.text_area :sobre_a_empresa, :rows=>2, :cols=>40 %>
+	</p>
+  </div>
+
+  <div class="actions">
+	<%= f.button :submit, 'Cadastrar', :class=>"botao"%>
+  </div>
+<% end %>

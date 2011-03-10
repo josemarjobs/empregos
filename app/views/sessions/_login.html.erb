@@ -1,0 +1,12 @@
+<%= form_tag log_in_anunciar_path do %>
+  <p class="login_form">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email] %>
+  </p class="login_form">
+  <p>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </p>
+  <p><%= submit_tag "Log in", :class=>"botao"%></p>
+<% end %>
+

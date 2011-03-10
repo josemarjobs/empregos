@@ -1,6 +1,8 @@
-<h1>Editing vaga</h1>
+<div id="formulario">
+	<%= render 'form'%>
+</div>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @vaga %> |
-<%= link_to 'Back', vagas_path %>
+<div class="options">
+	<%= link_to 'Visualizar Vaga', @vaga %> |
+	<%= link_to 'Voltar', vagas_path %>
+</div>

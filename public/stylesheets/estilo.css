@@ -9,6 +9,22 @@ body{
 	/*color:#604134;*/
 	font-family: Verdana, "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
+p.anunciar{
+	font-size: 20px;
+	text-align: center;
+	margin: 10px;
+   padding: 5px;
+	border:1px solid #FFF;
+	background-image: url(../images/odd.jpg);
+		
+}
+span.error{
+	color:red;
+}
+div.options{
+	padding: 10px;
+	font-size: 14px;
+}
 p.paginacao{
 	margin-bottom:10px;
 	margin-left:140px;
