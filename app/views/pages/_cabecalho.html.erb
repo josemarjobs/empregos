@@ -6,7 +6,11 @@
 	</div>
 	<div id="nav_bar" class="round">
 		<ul>
+			<% if current_user %>
+			<li><%= link_to 'Home', meus_dados_path %></li>			
+			<% else %>
 			<li><%= link_to 'Home', root_url %></li>
+			<% end %>
 			<li><%= link_to 'Anunciar', anunciar_url %></li>
 			<li><a href="como_funciona.html" class="borda">Como Funciona</a></li>
 			<li>

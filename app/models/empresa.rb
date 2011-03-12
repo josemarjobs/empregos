@@ -1,6 +1,7 @@
 class Empresa < ActiveRecord::Base
 	
 	has_many :vagas
+	has_many :perfis
 
   attr_accessor :password
   before_save :encrypt_password

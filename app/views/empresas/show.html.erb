@@ -1,20 +1,15 @@
-<p id="notice"><%= notice %></p>
+<div id="conteudo"> 
 
-<p>
-  <b>Nome:</b>
-  <%= @empresa.nome %>
-</p>
+	<h1 class="vagas_recentes">Vagas Cadastradas</h1>
+	<!-- VAGAS -->
+	<% @empresa.vagas.each do |vaga| %>
+		<%= render :partial=>'vaga', :locals=>{:vaga=>vaga} %>
+	<% end %>
+	<!-- FIMMMM VAGAS -->
 
-<p>
-  <b>Email:</b>
-  <%= @empresa.email %>
-</p>
-
-<p>
-  <b>Sobre a empresa:</b>
-  <%= @empresa.sobre_a_empresa %>
-</p>
-
-
-<%= link_to 'Edit', edit_empresa_path(@empresa) %> |
-<%= link_to 'Back', empresas_path %>
+</div>
+<div id="lateral">
+	<%= render :partial=>'empresas/lateral' %>
+</div>
+<div id="clear">
+</div>

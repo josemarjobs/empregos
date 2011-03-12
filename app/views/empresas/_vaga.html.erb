@@ -9,12 +9,18 @@
 			<b><%= vaga.perfil.nome %></b>
 			<% end %>
 		</p>
-	</div>	
+	</div>
 	<div class="detalhes">
-		<p class="titulo_vaga_index">
-			<%= link_to vaga.vaga, vaga, :class=>"titulo_vaga_index" %>
+		<p class="titulo_vaga"><%=vaga.vaga%>
+			<% if can_edit_dados(vaga.empresa_id) %>			
+			<span class="right">
+				<%= link_to "FINALIZAR", vaga, :method=>:delete, 
+					:confirm =>"Tem certeza que deseja eliminar a vaga?", :class=>"titulo_vaga" %>|
+				<%= link_to "EDITAR", edit_vaga_path(vaga), :class=>"titulo_vaga" %>
+			</span>
+			<% end %>
 		</p>
-		<p class="empresa">Emp.: <%= link_to vaga.empresa.nome_empresa, vaga.empresa,:class=>"empresa" %></p>
 		<p><%= vaga.vaga_curta %></p>
 	</div>
 </div>
+

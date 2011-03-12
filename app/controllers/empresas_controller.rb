@@ -1,6 +1,17 @@
 class EmpresasController < ApplicationController
   # GET /empresas
   # GET /empresas.xml
+	
+	respond_to :html, :xml
+	
+	def meusdados
+		@empresa = Empresa.find(session[:user_id])
+		respond_to do |format|
+			format.html {render :show }
+			format.xml  { render :xml => @empresas }
+		end
+	end
+
   def index
     @empresas = Empresa.all
 

@@ -15,9 +15,18 @@ p.anunciar{
 	margin: 10px;
    padding: 5px;
 	border:1px solid #FFF;
-	background-image: url(../images/odd.jpg);
-		
+	background-image: url(../images/odd.jpg);		
 }
+span.editar{
+	padding: 10px;
+	float:right;
+}
+span.editar a{
+	color:white;
+	text-decoration: underline;
+	font-size:15px;
+}
+
 span.error{
 	color:red;
 }
@@ -281,7 +290,8 @@ span.right{
 	font-size:14px;
 }
 #corpo #centro #lateral #estatisticas ul li{
-	margin:4px 0;
+	margin:5px 0;
+	font-size:17px;
 }
 #corpo #centro #lateral #estatisticas ul li a{
 	color:gray;
@@ -401,6 +411,7 @@ VISUALIZAR VAGAS
 	font-size:15px;
 	margin-bottom:25px;
 	padding-left:10px;
+
 	
 }
 #corpo #centro #conteudo #visualizar_vaga p{
@@ -659,6 +670,8 @@ a.opcoes_de_vagas{
 	padding:4px;
 	margin-top:20px;
 	margin-bottom:10px;
+	overflow: hidden;
+
 }
 #corpo #centro #lateral #dados_cadastrais h1{
 	font-size:18px;

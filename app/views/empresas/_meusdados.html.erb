@@ -1,0 +1,29 @@
+<% if current_user %>
+	<h1>Seus dados Cadastrais</h1><div class="clear"></div>
+<% else %>
+	<h1>Dados do Responsavel</h1><div class="clear"></div>
+<% end %>
+
+<p>
+  <b>Nome:</b>
+  <span class="dado"><%= @empresa.nome %><span class="dado">
+</p>
+
+<p>
+  <b>Email:</b>
+  <span class="dado"><%= @empresa.email %><span class="dado">
+</p>
+<p>
+  <b>Empresa:</b>
+  <span class="dado"><%= @empresa.nome_empresa %><span class="dado">
+</p>
+<div id="info">
+	<b>Sobre a Empresa:</b> <br />
+	<%= @empresa.sobre_a_empresa %>
+</div>
+<% if can_edit_dados(@empresa.id) %>
+<span class="editar">
+	<%= link_to 'Editar Dados', edit_empresa_path(@empresa) %>
+</span>
+<% end %>
+

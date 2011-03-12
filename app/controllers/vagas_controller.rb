@@ -1,8 +1,21 @@
 class VagasController < ApplicationController
+
+	respond_to :html, :xml
+
+
   # GET /vagas
   # GET /vagas.xml
   def index
-    @vagas = Vaga.all
+	if params[:perfil]
+		p = Perfil.find(params[:perfil])
+		@vagas = p.vagas
+	else	
+	 	if params[:perfil_id] && params[:empresa_id]
+			@vagas = Vaga.vagas(params[:perfil_id], params[:empresa_id])
+		else
+			@vagas = Vaga.all
+		end
+	end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -77,10 +90,11 @@ class VagasController < ApplicationController
   def destroy
     @vaga = Vaga.find(params[:id])
     @vaga.destroy
-
+	empresa = Empresa.find(session[:user_id])
     respond_to do |format|
-      format.html { redirect_to(vagas_url) }
+      format.html { redirect_to(empresa) }
       format.xml  { head :ok }
     end
+	
   end
 end

@@ -9,7 +9,7 @@
 	{:nome=>"Todos"},
 	{:nome=>"Profissional"},
 	{:nome=>"Estagiario"},
-	{:nome=>"Deficiente Fisico"},
+	{:nome=>"Deficiente fisico"},
 ].each do|p|
 	Perfil.find_or_create_by_nome(p)
 end

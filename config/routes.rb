@@ -1,7 +1,12 @@
 Empregos::Application.routes.draw do
   get "session/new"
-
-  resources :empresas
+	get "/vagas/para/:perfil" =>'vagas#index', :as=>'vagas_para'
+	get "/meus_dados" => 'empresas#meusdados', :as=>'meus_dados'
+  resources :empresas do
+		resources :perfis do
+			resources :vagas		
+		end
+  end
 
   resources :vagas
   resources :sessions
@@ -35,7 +40,7 @@ Empregos::Application.routes.draw do
   #     end
   #
   #     collection do
-  #       get 'sold'
+  #       get 'sold'empresa_perfi_vagas
   #     end
   #   end
 

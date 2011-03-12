@@ -1,0 +1,16 @@
+<h1>Estatisticas</h1>
+<ul>
+	<% Perfil.all.each do |p| %>
+	<% vagas = Vaga.vagas(p.id, @empresa.id) %>
+		<% if vagas.size > 0 %>
+			<% if p.nome=="Todos" %>
+			<li>	<%= "#{pluralize(vagas.size, "vaga")} para"%>
+					<%= link_to " #{p.nome} Perfis",empresa_perfil_vagas_path(@empresa, p.id)%> </li>
+			<% else %>
+			<li>	<%= "#{pluralize(vagas.size, "vaga")} para"%>
+					<%= link_to " #{p.nome}", empresa_perfil_vagas_path(@empresa, p.id) %> </li>
+			<% end %>
+		<% end %>
+	<% end %>
+	<li><%= link_to 'Ver todas vagas', vagas_path %></li>
+</ul>
