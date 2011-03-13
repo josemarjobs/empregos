@@ -4,6 +4,6 @@ class TagsController < ApplicationController
 
   def show
 		@tag = Tag.find(params[:id])
-		@vagas = @tag.vagas.order("created_at").page(params[:page]).per(8)
+		@vagas = @tag.vagas.order("created_at DESC").page(params[:page]).per(8)
   end
 end

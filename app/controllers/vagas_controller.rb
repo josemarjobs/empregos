@@ -8,12 +8,12 @@ class VagasController < ApplicationController
   def index
 	if params[:perfil]
 		p = Perfil.find(params[:perfil])
-		@vagas = p.vagas.order("created_at").page(params[:page]).per(8)
+		@vagas = p.vagas.order("created_at DESC").page(params[:page]).per(8)
 	else	
 	 	if params[:perfil_id] && params[:empresa_id]
-			@vagas = Vaga.vagas(params[:perfil_id], params[:empresa_id]).order("created_at").page(params[:page]).per(8)
+			@vagas = Vaga.vagas(params[:perfil_id], params[:empresa_id]).order("created_at DESC").page(params[:page]).per(8)
 		else
-			@vagas = Vaga.order("created_at").page(params[:page]).per(8)
+			@vagas = Vaga.order("created_at DESC").page(params[:page]).per(8)
 		end
 	end
 
