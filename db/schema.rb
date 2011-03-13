@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110311232959) do
+ActiveRecord::Schema.define(:version => 20110313174658) do
 
   create_table "empresas", :force => true do |t|
     t.string   "nome"
@@ -29,6 +29,17 @@ ActiveRecord::Schema.define(:version => 20110311232959) do
     t.datetime "updated_at"
   end
 
+  create_table "tags", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tags_vagas", :id => false, :force => true do |t|
+    t.integer "tag_id"
+    t.integer "vaga_id"
+  end
+
   create_table "vagas", :force => true do |t|
     t.string   "vaga"
     t.string   "como_se_candidatar"
@@ -39,7 +50,6 @@ ActiveRecord::Schema.define(:version => 20110311232959) do
     t.string   "cidade"
     t.integer  "perfil_id"
     t.string   "pre_requisitos"
-    t.string   "tags"
     t.text     "descricao"
     t.datetime "created_at"
     t.datetime "updated_at"

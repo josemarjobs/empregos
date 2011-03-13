@@ -1,0 +1,16 @@
+<% if notice %>
+	<p class="anunciar"><span class="error"><%= notice %></span></p>
+<% end %>
+<div id="login_cadastro" class="round">
+
+	<div id="login">
+		<p class="titulo">faça o login, se já possui cadastro</p>
+		<%= render :partial=>'sessions/login', :locals=>{:from => login_form} %>		
+	</div>
+
+	<div id="cadastro">
+		<p class="titulo">Caso não possua cadastro, preencha o formulario abaixo, é rapido e simples</p>
+		<%= render :partial=>'empresas/form'%>
+	</div>
+</div>
+

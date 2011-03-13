@@ -8,12 +8,12 @@ class VagasController < ApplicationController
   def index
 	if params[:perfil]
 		p = Perfil.find(params[:perfil])
-		@vagas = p.vagas
+		@vagas = p.vagas.order("created_at").page(params[:page]).per(8)
 	else	
 	 	if params[:perfil_id] && params[:empresa_id]
-			@vagas = Vaga.vagas(params[:perfil_id], params[:empresa_id])
+			@vagas = Vaga.vagas(params[:perfil_id], params[:empresa_id]).order("created_at").page(params[:page]).per(8)
 		else
-			@vagas = Vaga.all
+			@vagas = Vaga.order("created_at").page(params[:page]).per(8)
 		end
 	end
 
@@ -53,13 +53,16 @@ class VagasController < ApplicationController
   # POST /vagas
   # POST /vagas.xml
   def create
+	 tags = params[:tags].gsub(" ","").split(",")
     @vaga = Vaga.new(params[:vaga])
+
 	 empresa = Empresa.find(session[:user_id])
 	 empresa.nome_empresa = params[:empresa] if params[:empresa]
 	 empresa.save
 	 @vaga.empresa = empresa
     respond_to do |format|
       if @vaga.save
+		 @vaga.create_tags(tags)
         format.html { redirect_to(@vaga, :notice => 'Vaga was successfully created.') }
         format.xml  { render :xml => @vaga, :status => :created, :location => @vaga }
       else

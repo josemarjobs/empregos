@@ -21,7 +21,12 @@
 			<b>Descrição:</b> <%= @vaga.descricao %>
 		</p>
 		<p><b>Pre-requisitos:</b> <%= @vaga.pre_requisitos %></p>
-		<p><b>Palavras chave:</b><%= @vaga.tags %>|<a href="">java</a>, <a href="">ruby</a>, <a href="">ror</a>, <a href="">poo</a>, <a href="">c</a></p>
+		<p>
+			<b>Palavras chave:</b>
+				<% @vaga.tags.each do |t| %>
+					<%= link_to t.nome, t , :class=>'tags' %>
+				<% end %>
+		</p>
 
    <p class="candidatar">
 		<%= link_to 'Candidatar-se', '', :class=>"candidatar_se" %> 

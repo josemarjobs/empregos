@@ -2,12 +2,20 @@
   margin:0;  
   padding:0;  
 }    
+.tags{
+	margin-left: 10px;
+	
+}
 body{
 	background:url(../images/back.jpg);
 	font-size:75%;
 	color:#000;
 	/*color:#604134;*/
 	font-family: Verdana, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+span.tag{
+	font-size: 25px;
+	color:gray;
 }
 p.anunciar{
 	font-size: 20px;
@@ -26,7 +34,11 @@ span.editar a{
 	text-decoration: underline;
 	font-size:15px;
 }
-
+span.dica{
+	color:gray;
+	font-style: italic;
+	
+}
 span.error{
 	color:red;
 }

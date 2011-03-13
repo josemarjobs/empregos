@@ -1,0 +1,12 @@
+<div id="vagas"> 
+	<h1 class="vagas_recentes">Vagas em <span class="tag"><%= sanitize "'#{@tag.nome_tag}'" %></span></h1>
+	<p class="paginacao">
+		<%= paginate @vagas %>
+	</p>
+
+	<%= render @vagas %>
+		
+	<p class="paginacao">
+		<%= paginate @vagas %>
+	</p>
+</div>

@@ -1,4 +1,8 @@
 Empregos::Application.routes.draw do
+  get "tags/index"
+
+  get "tags/show"
+
   get "session/new"
 	get "/vagas/para/:perfil" =>'vagas#index', :as=>'vagas_para'
 	get "/meus_dados" => 'empresas#meusdados', :as=>'meus_dados'
@@ -8,6 +12,7 @@ Empregos::Application.routes.draw do
 		end
   end
 
+	resources :tags
   resources :vagas
   resources :sessions
 

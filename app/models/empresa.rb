@@ -9,7 +9,6 @@ class Empresa < ActiveRecord::Base
   validates_presence_of :password, :on => :create
   validates_presence_of :email
   validates_presence_of :nome
-  validates_uniqueness_of :nome_empresa
   
   def self.authenticate(email, password)
     user = find_by_email(email)

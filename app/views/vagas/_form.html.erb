@@ -30,7 +30,15 @@
 		 <%= f.select :perfil_id, options_from_collection_for_select(Perfil.all, "id", "nome")%>
 	</p>
     <%= f.input :pre_requisitos %>
-    <%= f.input :tags %>
+		
+	<% if new %>
+		<p>
+			 <%= f.label :tags %>
+			 <%= text_field_tag :tags %>
+			 <span class="dica">separe-as com virgula(,)</span>
+		</p>
+	<% end %>
+
 	<p>
 		 <%= f.label :descricao %>
 		 <%= f.text_area :descricao, :rows=>10, :cols=>70 %>

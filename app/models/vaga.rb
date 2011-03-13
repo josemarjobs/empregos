@@ -5,6 +5,7 @@ class Vaga < ActiveRecord::Base
 	
 	belongs_to :perfil
 	belongs_to :empresa
+	has_and_belongs_to_many :tags
 
 	def to_param
 		"#{id}-#{down}"
@@ -27,4 +28,11 @@ class Vaga < ActiveRecord::Base
 		end
 		
 	end
+
+	def create_tags(tag_array)
+		tag_array.each do |tag|
+			tags<< Tag.find_or_create_by_nome(:nome=>tag)
+		end
+	end
+
 end

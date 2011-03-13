@@ -5,25 +5,10 @@
 		<p class="anunciar">Preencha os dados e publique a vaga</p>
 	<% end %>
 <% else %>
-	<% if notice %>
-		<p class="anunciar"><span class="error"><%= notice %></span></p>
-	<% end %>
-	<div id="login_cadastro" class="round">
-	
-		<div id="login">
-			<p class="titulo">faça o login, se já possui cadastro</p>
-			<%= render :partial=>'sessions/login'%>		
-		</div>
-	
-		<div id="cadastro">
-			<p class="titulo">Caso não possua cadastro, preencha o formulario abaixo, é rapido e simples</p>
-			<%= render :partial=>'empresas/form'%>
-		</div>
-	</div>
+	<%= render :partial=>'cabecalho', :locals=>{:login_form => "anunciar"}  %>
 <% end %>
-
 <div id="formulario">
-	<%= render 'form' %>
+	<%= render :partial=>'form', :locals=>{:new=>true} %>
 </div>
 
 <%= link_to 'Back', vagas_path %>

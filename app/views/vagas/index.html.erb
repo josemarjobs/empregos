@@ -1,13 +1,13 @@
 <div id="vagas"> 
 	<h1 class="vagas_recentes">Todas vagas</h1>
 	<p class="paginacao">
-		<a href="">&larr;</a><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a><a href="">6</a><a href="">7</a><a href="">8</a><a href="">&rarr;</a>
+		<%= paginate @vagas%>
 	</p>
 
 		<%=render @vagas %>
 
 	<p class="paginacao">
-	<a href="">&larr;</a><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a><a href="">6</a><a href="">7</a><a href="">8</a><a href="">&rarr;</a>
+		<%= paginate @vagas %>
 	</p>
 </div>
 
