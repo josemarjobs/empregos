@@ -1,0 +1,7 @@
+<ul>
+	<% tags.each do |tag| %>
+	<% vaga = tag.vagas.order[0] %>
+		<li><%= link_to vaga.vaga, vaga, :class=>"sombra"%></li>
+	<% end %>	    	
+</ul>
+

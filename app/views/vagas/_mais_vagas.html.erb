@@ -1,0 +1,5 @@
+<ul>
+	<% empresa.vagas.order("created_at DESC").limit(5).each do |vaga| %>
+		<li><%= link_to vaga.vaga, vaga, :class=>"sombra_colorida" %></li>
+	<% end %>
+</ul>

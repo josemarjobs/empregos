@@ -8,9 +8,9 @@ class SessionsController < ApplicationController
 	  responsavel = Empresa.authenticate(params[:email], params[:password])
 	  if responsavel
 		 session[:user_id] = responsavel.id
-			redirect(params[:from],"Logado!!!")
+			redirect_ok(params[:from],"Logado!!!")
 	  else
-			redirect(params[:from],"E-mailo ou password incorreto, pf verifique!")
+			redirect_falha(params[:from],"E-mailo ou password incorreto, pf verifique!")
 	  end
 	end
 
@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
 	end
 
 	private
-	def redirect(from, msg)
+	def redirect_ok(from, msg)
 		 if from == "anunciar"
 			 redirect_to anunciar_url, :notice => msg
 		 else
@@ -28,4 +28,11 @@ class SessionsController < ApplicationController
 		 end
 	end
 
+	def redirect_falha(from, msg)
+		 if from == "anunciar"
+			 redirect_to anunciar_url, :notice => msg
+		 else
+			 redirect_to log_in_url, :notice=>msg
+		 end
+	end
 end

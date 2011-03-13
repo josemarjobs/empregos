@@ -1,20 +1,8 @@
 <div id="mais_vagas" class="round">
 	<h1>+ Vagas de SoftSystems Corp</h1><div class="clear"></div>
-	<ul>
-		<li><a href="">Programador Java Jr</a></li>
-		<li><a href="">Desenvolvedor Ruby on Rails Jr</a></li>
-		<li><a href="">Programador JavaScript</a></li>
-		<li><a href="">Programador JavaEE</a></li>
-		<li><a href="">Programador PHP</a></li>
-	</ul>
+	<%= render :partial=>'mais_vagas', :locals=>{:empresa=>@vaga.empresa} %>
 </div>
 <div id="relacionadas">
 	<h1>Vagas Relacionadas</h1>
-	    <ul>
-			<li><a href="">Programador Java Jr</a></li>
-			<li><a href="">Desenvolvedor Ruby on Rails Jr</a></li>
-			<li><a href="">Programador JavaScript</a></li>
-			<li><a href="">Programador JavaEE</a></li>
-			<li><a href="">Programador PHP</a></li>			    	
-		</ul>
+	<%= render :partial=>'vagas_relacionadas', :locals=>{:tags=>@vaga.tags} %>
 </div>

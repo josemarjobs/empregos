@@ -6,7 +6,7 @@
 		<span class="data"><%= @vaga.created_at.to_date.to_formatted_s(:long) %></span>
 		</p>
 		<p>
-			<b>Empresa:</b> <a href=""><%= @vaga.empresa.nome_empresa %></a>
+			<b>Empresa:</b> <%= link_to @vaga.empresa.nome_empresa, @vaga.empresa %>
 		</p>
 		<p>
 			<b>Faixa Salarial:</b> <%= @vaga.salario_min %> - <%= @vaga.salario_max %>

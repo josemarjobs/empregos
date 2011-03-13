@@ -15,7 +15,7 @@ body{
 }
 span.tag{
 	font-size: 25px;
-	color:gray;
+	color:gray;r
 }
 p.anunciar{
 	font-size: 20px;
@@ -51,7 +51,7 @@ p.paginacao{
 	margin-left:140px;
 }
 p.paginacao a{
-	border:1px solid #0099FF;;
+	border:1px solid #0099FF;
 	padding:1px 2px;
 	font-size:13px;
 	margin:4px;
@@ -86,6 +86,7 @@ h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#000;}
 .sombra{
 	text-shadow:1px 1px 1px #FFF; /* propriedade que coloca a sombra no texto */  	
 }
+
 #cabecalho{
 	background:#91BAD9;
 }
@@ -271,6 +272,11 @@ div.clear{
     font-size: 20px;
   	color: #E98C08;
 }
+
+#corpo #centro #conteudo .vaga .detalhes p a.titulo_vaga_index:hover{
+	text-decoration: none;
+  	color: #0099FF;
+}
 #corpo #centro #conteudo .vaga .detalhes p.titulo_vaga{
   	margin-bottom:10px;
   	color: #E98C08;
@@ -280,6 +286,9 @@ div.clear{
 #corpo #centro #conteudo .vaga .detalhes p span.right a.titulo_vaga{
     font-size: 13px;
   	margin:0px 10px;
+}
+#corpo #centro #conteudo .vaga .detalhes p span.right a.titulo_vaga:hover{
+	text-decoration:none;
 }
 span.right{
 	float:right;
@@ -460,6 +469,9 @@ VISUALIZAR VAGAS
 	margin-top:20px;
 	margin-bottom:10px;
 }
+.sombra_colorida{
+	text-shadow:1px 1px 1px gray; /* propriedade que coloca a sombra no texto */  	
+}
 #corpo #centro #lateral #mais_vagas h1{
 	font-size:18px;
 	color:#FFF;
@@ -475,22 +487,23 @@ VISUALIZAR VAGAS
 }
 #corpo #centro #lateral #mais_vagas ul li a{
 	color:black;
-	text-decoration:underline;
 }
 /*******************RELACIONADAS************************************/
 #corpo #centro #lateral #relacionadas{
 	margin-bottom:20px;
 }
 #corpo #centro #lateral #relacionadas ul{
-	padding-left:20px;
+	padding-left:30px;
 	list-style-type:circle;
 	font-size:14px;
 }
 #corpo #centro #lateral #relacionadas ul li{
-	margin:4px 0;
+	margin:8px 0;
 }
+
 #corpo #centro #lateral #relacionadas ul li a{
 	color:gray;
+	font-size:17px;
 }
 #corpo #centro #lateral #relacionadas h1{
 	font-size:20px;
@@ -766,6 +779,11 @@ a.opcoes_de_vagas{
     font-size: 20px;
   	color: #E98C08;
 }
+#corpo #centro #vagas .vaga .detalhes p a.titulo_vaga_index:hover{
+text-decoration: none;
+color:#0099FF;
+
+}
 #corpo #centro #vagas .vaga .detalhes p.titulo_vaga{
   	margin-bottom:10px;
   	color: #E98C08;
@@ -775,6 +793,11 @@ a.opcoes_de_vagas{
 #corpo #centro #vagas .vaga .detalhes p span.right a.titulo_vaga{
     font-size: 13px;
   	margin:0px 10px;
+}
+#corpo #centro #vagas .vaga .detalhes p span.right a.titulo_vaga:hover{
+text-decoration: none;
+
+color:#0099FF;
 }
 span.right{
 	float:right;
