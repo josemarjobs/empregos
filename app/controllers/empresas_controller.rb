@@ -6,6 +6,8 @@ class EmpresasController < ApplicationController
 	
 	def meusdados
 		@empresa = Empresa.find(session[:user_id])
+		@vagas = @empresa.vagas.order("created_at DESC").page(params[:page]).per(12)
+
 		respond_to do |format|
 			format.html {render :show }
 			format.xml  { render :xml => @empresas }
@@ -24,7 +26,9 @@ class EmpresasController < ApplicationController
   # GET /empresas/1
   # GET /empresas/1.xml
   def show
-    @empresa = Empresa.find(params[:id])
+	@empresa = Empresa.find(params[:id])
+	#@vagas = @tag.vagas.order("created_at DESC").page(params[:page]).per(8)
+	@vagas = @empresa.vagas.order("created_at DESC").page(params[:page]).per(10)
 
     respond_to do |format|
       format.html # show.html.erb

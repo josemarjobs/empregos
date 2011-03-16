@@ -8,8 +8,10 @@ class Empresa < ActiveRecord::Base
   
   validates_presence_of :password, :on => :create
   validates_presence_of :email
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   validates_presence_of :nome
   
+
   def self.authenticate(email, password)
     user = find_by_email(email)
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
@@ -25,5 +27,6 @@ class Empresa < ActiveRecord::Base
       self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
     end
   end
+
 
 end

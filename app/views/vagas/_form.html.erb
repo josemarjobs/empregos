@@ -1,5 +1,7 @@
 <%= simple_form_for(@vaga) do |f| %>
-  <%= f.error_notification %>
+	<% if f.error_notification %>
+		<span class="info">Alguns erros encontrados, por favor verifique</span>
+	<% end %>
 
   <div class="inputs">
     <%= f.input :vaga %>
@@ -8,11 +10,23 @@
 		 <%= f.select :como_se_candidatar, ['Enviar CV para:', 'Ligar para:'], 
 		 :select_html => { :class => 'como_candidatar' } %>
 
-		 <%= f.text_field :contato %>
+		 <%= f.text_field :contato %><span class="error"><%= @vaga.errors[:contato] %></span>
 	</p>
 	<p>
 		 <%= f.label 'Faixa Salarial' %>
-		 <%= f.text_field :salario_min, :class=>'salario' %> - <%= f.text_field :salario_max, :class=>'salario' %>
+		 <%= f.text_field :salario_min ,:class=>'salario' %> -
+		 <%= f.text_field :salario_max, :class=>'salario' %>
+		<% if @vaga.errors[:salarios] || @vaga.errors[:salario_min] || @vaga.errors[:salario_max] %>
+			<% if @vaga.errors[:salario_min] 
+					erro = @vaga.errors[:salario_min]
+				end
+				if @vaga.errors[:salario_max] 
+					erro = @vaga.errors[:salario_max]
+				end %>
+			<span class="error"><%= "#{@vaga.errors[:salarios]}  #{erro}" %></span>
+		<% else %>
+			<span class="info">Coloque '0'(zero) para valor À COMBINAR</span>
+		<% end %>
 	</p>
 	
 	<% if current_user && current_user.nome_empresa %>
@@ -35,13 +49,14 @@
 		<p>
 			 <%= f.label :tags %>
 			 <%= text_field_tag :tags %>
-			 <span class="dica">separe-as com virgula(,)</span>
+				<span class="dica">separe-as com virgula(,)</span>
 		</p>
 	<% end %>
 
 	<p>
 		 <%= f.label :descricao %>
-		 <%= f.text_area :descricao, :rows=>10, :cols=>70 %>
+		 <%= f.text_area :descricao, :rows=>10, :cols=>70 %><br />
+		<span class="error"><%= @vaga.errors[:descricao] %></span>
 	</p>
   </div>
 

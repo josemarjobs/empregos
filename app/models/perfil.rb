@@ -5,6 +5,6 @@ class Perfil < ActiveRecord::Base
 		"#{id}-#{down}"
 	end
 	def down
-		nome.downcase.gsub(" ","_")
+		nome.downcase.gsub(" ","_").gsub("/","-")
 	end
 end

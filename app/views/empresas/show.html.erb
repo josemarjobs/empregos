@@ -1,11 +1,17 @@
 <div id="conteudo"> 
 
-	<h1 class="vagas_recentes">Vagas Cadastradas</h1>
+	<h1 class="vagas_recentes">Vagas Cadastradas <%= @vagas.size %></h1>
 	<!-- VAGAS -->
-	<% @empresa.vagas.each do |vaga| %>
+	<p class="paginacao">
+		<%= paginate @vagas %>
+	</p>
+	<% @vagas.each do |vaga| %>
 		<%= render :partial=>'vaga', :locals=>{:vaga=>vaga} %>
 	<% end %>
 	<!-- FIMMMM VAGAS -->
+	<p class="paginacao">
+		<%= paginate @vagas %>
+	</p>
 
 </div>
 <div id="lateral">
