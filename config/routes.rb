@@ -1,4 +1,8 @@
 Empregos::Application.routes.draw do
+  get "usuarios/new"
+
+  get "usuarios/create"
+
   get "tags/index"
 
   get "tags/show"
@@ -12,9 +16,10 @@ Empregos::Application.routes.draw do
 		end
   end
 
+	resources :usuarios
 	resources :tags
-  resources :vagas
-  resources :sessions
+	resources :vagas
+	resources :sessions
 
 	match '/home' => 'pages#home', :as=>'home'
 	get '/anunciar' =>'vagas#new', :as => 'anunciar'

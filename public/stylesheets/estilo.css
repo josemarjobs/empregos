@@ -362,6 +362,10 @@ FORMULARIO DE CADASTRO RAPIDO
 	font-size:120%;
 	padding: 2px;
 }
+#corpo #centro #lateral #cadastre-se input.erro{
+	border:1px solid red;
+	color:red;
+}
 #corpo #centro #lateral #cadastre-se input.botao{
 	margin-left:185px;
 	margin-bottom:4px;

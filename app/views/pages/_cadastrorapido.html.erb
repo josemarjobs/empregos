@@ -1,18 +1,22 @@
 <h1>Cadastre-se e receba Notícias</h1><div class="clear"></div>
-<form action="" method="post" accept-charset="utf-8">
-	<p><label>E-mail:</label>
-		<input type="text" class="dados" name="email" value="" /></p>
-	<p><label>Area:</label>
-	<select name="area" class="dados">
-		<option selected="selected">Todas</option>
-		<option value="com">Computacao</option>
-		<option value="mat">Matematica</option>
-		<option value="com">Astrofisica</option>
-		<option value="mat">Mecatronica</option>
-	</select></p>
-	<p><input type="submit" value="Continuar" class="botao" /></p>
-</form>
+<%= form_tag('/usuarios') do -%>
+	<p><%= label_tag 'email', 'E-mail' %>
+		<% if notice %>
+			<%= text_field_tag :email, notice, :class=>"dados erro" %>
+		<% else %>
+			<%= text_field_tag :email, nil, :class=>"dados" %>
+		<% end %>
+	</p>
+	<p>
+		<%= label_tag 'area', 'Área' %>
+	 	<%= select_tag "areas", options_from_collection_for_select(Area.all, "id", "nome"),
+	      :multiple => true, :size=>5, :class => 'dados' %>
+	</p>
+   <p><%= submit_tag 'Salvar', :class=>"botao" %></p>
+<% end -%>
+
 <div id="info">
 	Voce receberá noticias sobre as vagas 
 	mais recentes e as vagas que possam lhe interessar.
 </div>
+

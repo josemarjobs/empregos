@@ -10,7 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110313174658) do
+ActiveRecord::Schema.define(:version => 20110317212337) do
+
+  create_table "areas", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "areas_usuarios", :id => false, :force => true do |t|
+    t.integer "area_id"
+    t.integer "usuario_id"
+  end
 
   create_table "empresas", :force => true do |t|
     t.string   "nome"
@@ -38,6 +49,13 @@ ActiveRecord::Schema.define(:version => 20110313174658) do
   create_table "tags_vagas", :id => false, :force => true do |t|
     t.integer "tag_id"
     t.integer "vaga_id"
+  end
+
+  create_table "usuarios", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email"
   end
 
   create_table "vagas", :force => true do |t|

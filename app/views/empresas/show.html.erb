@@ -1,6 +1,6 @@
 <div id="conteudo"> 
 
-	<h1 class="vagas_recentes">Vagas Cadastradas <%= @vagas.size %></h1>
+	<h1 class="vagas_recentes">Vagas Cadastradas <%= @empresa.vagas.size %></h1>
 	<!-- VAGAS -->
 	<p class="paginacao">
 		<%= paginate @vagas %>

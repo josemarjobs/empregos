@@ -14,5 +14,17 @@
 	Perfil.find_or_create_by_nome(p)
 end
 
+[
+	{:nome=>"Todas"},
+	{:nome=>"Computação"},
+	{:nome=>"Matematica"},
+	{:nome=>"Física"},
+	{:nome=>"Mecatrônica"},
+	{:nome=>"Medicina"},
+	{:nome=>"Petróleo"},
+	{:nome=>"Carpinteiro"},
+].each do|p|
+	Area.find_or_create_by_nome(p)
+end
 
 
