@@ -27,6 +27,15 @@ class Vaga < ActiveRecord::Base
 	belongs_to :empresa
 	has_and_belongs_to_many :tags
 
+	def self.search(search)
+	  if search
+		 where('vaga LIKE ?', "%#{search}%")
+	  else
+		 scoped
+	  end
+	end
+
+
 	#before_save :clean_up
 
 	def clean_up

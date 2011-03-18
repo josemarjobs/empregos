@@ -1,11 +1,13 @@
 Empregos::Application.routes.draw do
-  get "usuarios/new"
+	get "usuarios/new"
 
-  get "usuarios/create"
+	get "usuarios/create"
 
-  get "tags/index"
+	get "tags/index"
 
-  get "tags/show"
+	get "tags/show"
+	
+	get "/busca" => 'pages#search', :as => :search
 
   get "session/new"
 	get "/vagas/para/:perfil" =>'vagas#index', :as=>'vagas_para'

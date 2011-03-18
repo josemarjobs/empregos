@@ -16,5 +16,11 @@
 		</p>
 		<p class="empresa">Emp.: <%= link_to vaga.empresa.nome_empresa, vaga.empresa,:class=>"empresa" %></p>
 		<p><%= vaga.vaga_curta %></p>
+		<p>
+			<b>Palavras chave:</b>
+				<% vaga.tags.each do |t| %>
+					<%= link_to t.nome, t , :class=>'tags' %>
+				<% end %>
+		</p>
 	</div>
 </div>

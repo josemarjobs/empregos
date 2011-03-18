@@ -1,13 +1,14 @@
 <div id="centro_barra">
 	<div id="busca">
-		<form action="" method="get" accept-charset="utf-8">
-			<div class="searchBox round"> 
-				<input class="term" id="q" name="term" size="45" maxlength="2048" type="text" /> 
-				<input class="search" type="submit" value="Pesquisar" /> 
+		<%= form_tag('/busca', :method=>"get") do %>
+			<div class="searchBox round">
+					<%= text_field_tag :term, nil, :class=>"term" %>
+					<%= submit_tag 'Pesquisar', :class=>"search" %>
 				<div class="clear">
 				</div>
 			</div>
-		</form>	
+		<% end %>
+
 	</div>
 
 	<div id="anunciar">	
@@ -15,4 +16,6 @@
 		Clique <%= link_to 'aqui', anunciar_path %>, e rapido e simples
 	</div>
 </div>
+
+
 

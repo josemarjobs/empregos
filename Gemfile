@@ -10,6 +10,8 @@ gem "simple_form"
 gem "bcrypt-ruby", :require => "bcrypt"
 gem 'kaminari'
 
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

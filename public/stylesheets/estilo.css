@@ -6,6 +6,20 @@
 	margin-left: 10px;
 	
 }
+p.vaga_nao_encontrada{
+	font-size:30px;
+	margin-top: 50px;
+	
+	padding-left:30px;
+	color:gray;
+}
+p.vaga_nao_encontrada_info{
+	font-size:20px;
+	padding-left:30px;
+	color:gray;
+	font-style:italic;
+}
+
 body{
 	background:url(../images/back.jpg);
 	font-size:75%;
