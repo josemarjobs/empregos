@@ -1,9 +1,9 @@
 class Vaga < ActiveRecord::Base
 
  #      t.string :vaga
- #     t.string :como_se_candidatar
+ #      t.string :como_se_candidatar
  #      t.string :contato
- #     t.float :salario_min
+ #      t.float :salario_min
  #      t.float :salario_max
  #      t.integer :empresa_id
  #      t.string :cidade
@@ -29,7 +29,8 @@ class Vaga < ActiveRecord::Base
 
 	def self.search(search)
 	  if search
-		 where('vaga LIKE ? OR vaga LIKE ?', "%#{search}%","%#{search.downcase}%")
+		 where('vaga LIKE ? OR vaga LIKE ?', "%#{search}%", "%#{search.downcase}%")
+		 
 	  else
 		 scoped
 	  end

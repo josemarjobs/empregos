@@ -11,5 +11,5 @@
 			<% end %>
 		<% end %>
 	<% end %>
-	<li><%= link_to 'Ver todas vagas', vagas_path %></li>
+	<li><%= link_to "Ver todas vagas (#{Vaga.all.size})", vagas_path %></li>
 </ul>
