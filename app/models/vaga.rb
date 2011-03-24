@@ -29,7 +29,7 @@ class Vaga < ActiveRecord::Base
 
 	def self.search(search)
 	  if search
-		 where('vaga LIKE ? OR vaga LIKE ?', "%#{search}%", "%#{search.downcase}%")
+		 where("vaga LIKE ? OR vaga LIKE ? OR vaga LIKE ? OR vaga LIKE ?", "%#{search}%", "%#{search.downcase}%", "%#{search.capitalize}%", "%#{search.upcase}%")
 		 
 	  else
 		 scoped
